@@ -61,6 +61,25 @@ class UI{
         element.innerHTML = options;
     }
 
+    spinner(){
+
+        this.cleanTempeture();
+        this.cleanUbication();
+
+        const divSpinner = document.createElement('div');
+        divSpinner.classList.add('sk-chase');
+
+        divSpinner.innerHTML = `
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        `
+        resultado.appendChild(divSpinner)
+    }
+
     cleanTempeture() {
         while (resultado.firstChild) {
             resultado.firstChild.remove();

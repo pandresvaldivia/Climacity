@@ -8,6 +8,8 @@ export function getWeather(country, city) {
     const key = 'c09f2225e616740afcdad4ef82002ce4';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${key}`
 
+    ui.spinner();
+
     fetch(url)
         .then(response => response.json())
         .then(data =>{
